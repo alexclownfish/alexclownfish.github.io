@@ -6,7 +6,7 @@
   <link href="http://alexcld.com/atom.xml" rel="self"/>
   
   <link href="http://alexcld.com/"/>
-  <updated>2020-09-25T09:08:43.000Z</updated>
+  <updated>2020-09-30T08:01:42.693Z</updated>
   <id>http://alexcld.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo迁移至window+githubpush</title>
+    <link href="http://alexcld.com/2020/09/30/hexo%E8%BF%81%E7%A7%BB%E8%87%B3window-githubpush/"/>
+    <id>http://alexcld.com/2020/09/30/hexo%E8%BF%81%E7%A7%BB%E8%87%B3window-githubpush/</id>
+    <published>2020-09-30T07:59:52.000Z</published>
+    <updated>2020-09-30T08:01:42.693Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><ul><li>在windows上安装Git bash</li><li>在windows上安装nodejs</li><li>下载地址：<a href="https://www.git-scm.com/">Git bash</a> ,  <a href="https://nodejs.org/en/">nodejs</a></li><li>将如下几个文件，目录拷贝至新的电脑<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"> package.json</span><br><span class="line"> scaffolds/</span><br><span class="line"> source/</span><br><span class="line"> themes/</span><br></pre></td></tr></table></figure></li></ul><h2 id="Git-bash安装"><a href="#Git-bash安装" class="headerlink" title="Git bash安装"></a>Git bash安装</h2><p>安装Windows版的Git安装程序</p><p><img src="https://img-blog.csdnimg.cn/20200930150734139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>安装组件：这里可以使用默认选项，点击【Next &gt;】</p><ul><li>图标组件（Additional icons）：选择是否创建桌面快捷方</li><li>桌面浏览（Windows Explorer integration）<ul><li>使用Git Bash方式，shell方式</li><li>受用桌面程序方式</li><li>关联配置文件：是否关联git配置文件，该配置文件主要显示文本编辑器样式</li><li>关联shell脚本文件：是否关联Bash命令执行脚本文件</li><li>使用TrueType编码：在命令行中是否使用TrueType编码，该编码是微软和苹果公司制定的通用编码<br><img src="https://img-blog.csdnimg.cn/20200930151134715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li></ul></li><li>Git自带：使用Git自带的Git Bash命令行工具</li><li>系统自带CMD：使用windows系统的命令行工具</li><li>二者都有：上面二者同时配置，但是注意，这样会将windows中的find.exe和sort.exe工具覆盖，如果不懂这些尽量不要选择<br><img src="https://img-blog.csdnimg.cn/20200930151232313.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>其余默认下一步即可完成安装。</li></ul><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><p>因为Hexo基于Node.js开发，所以不管我们是Windwos环境还是Linux环境都需要安装Node.js才能完成Hexo的搭建，安装过程也很简单。<br>安装过程中这个Add to PATH要记得勾选，不然自己配置环境变量很麻烦<br><img src="https://img-blog.csdnimg.cn/20200930151338956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h2 id="安装hexo并推送至github"><a href="#安装hexo并推送至github" class="headerlink" title="安装hexo并推送至github"></a>安装hexo并推送至github</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">##安装hexo-cli</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">##查看版本</span><br><span class="line">hexo -v</span><br><span class="line">##安装所需模块</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure><p>安装模块若出现报错请执行</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf node_modules &amp;&amp; npm install --force</span><br></pre></td></tr></table></figure><p>构建并发布</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure><p>若出现此类报错如图：<br><img src="https://img-blog.csdnimg.cn/20200930152314309.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##执行这条命令后正常</span><br><span class="line">git config --<span class="built_in">global</span> core.autocrlf <span class="literal">false</span></span><br></pre></td></tr></table></figure><h2 id="免密部署"><a href="#免密部署" class="headerlink" title="免密部署"></a>免密部署</h2><p>公钥的话跟linux系统生成一样</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C example@<span class="number">163.</span>com</span><br></pre></td></tr></table></figure><p>然后公钥添加至<br><img src="https://img-blog.csdnimg.cn/20200930153334819.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>注意修改_config.yml文件中的repo地址，改为ssh方式</p><p>到这里迁移就完成了，<a href="https://alexcld.com/">作者博客</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;准备环境&quot;&gt;&lt;a href=&quot;#准备环境&quot; class=&quot;headerlink&quot; title=&quot;准备环境&quot;&gt;&lt;/a&gt;准备环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在windows上安装Git bash&lt;/li&gt;
+&lt;li&gt;在windows上安装nodejs&lt;/li&gt;
+&lt;li&gt;</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="http://alexcld.com/categories/hexo/"/>
+    
+    
+    <category term="hexo迁移至window+githubpush" scheme="http://alexcld.com/tags/hexo%E8%BF%81%E7%A7%BB%E8%87%B3window-githubpush/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo插入背景音乐</title>
