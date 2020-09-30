@@ -86,6 +86,7 @@
 </li>
 </ul>
 <h2 id="Git-bash安装"><a href="#Git-bash安装" class="headerlink" title="Git bash安装"></a>Git bash安装</h2><p>安装Windows版的Git安装程序</p>
+<a id="more"></a>
 <p><img src="https://img-blog.csdnimg.cn/20200930150734139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>安装组件：这里可以使用默认选项，点击【Next &gt;】</p>
 <ul>
 <li>图标组件（Additional icons）：选择是否创建桌面快捷方</li>
