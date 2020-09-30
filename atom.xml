@@ -136,7 +136,7 @@
     <link href="http://alexcld.com/2020/08/14/%E8%A7%A3%E5%86%B3Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/"/>
     <id>http://alexcld.com/2020/08/14/%E8%A7%A3%E5%86%B3Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</id>
     <published>2020-08-14T05:34:36.000Z</published>
-    <updated>2020-09-30T08:26:36.182Z</updated>
+    <updated>2020-09-30T08:32:41.797Z</updated>
     
     <content type="html"><![CDATA[<p>版本：Hexo5.0.2（Hexo3以上即可）</p><p>解决方案如下：</p><ul><li><p>修改配置文件</p><ul><li>在根目录下配置文件_config.yml 中有 post_asset_folder:false改为true。</li><li>这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用</li><li>我这里放的图片是：sky2.jpg</li></ul></li><li><p>安装插件：hexo-asset-image(插件经测试无问题)</p><a id="more"></a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:<span class="comment">//github.com/7ym0n/hexo-asset-image --save（使用cnpm速度相当会快点，当然npm也可以滴）</span></span><br></pre></td></tr></table></figure><ul><li>使用这个插件来引入图片，而不是网上那些方法里说的用传统md语法相对路径的方法。</li></ul></li><li><p>插入图片时用这种方式：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img sky2.jpg This is an test image %&#125;</span><br></pre></td></tr></table></figure><ul><li>其中sky2.jpg就是你要引用的图片，我这里就是sky2.jpg，后面的This is an test image是图片描述，可以自己修改。</li></ul></li></ul><p>具体示例：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: A sunny day</span><br><span class="line">date: <span class="number">2020</span><span class="number">-08</span><span class="number">-14</span> <span class="number">11</span>:<span class="number">24</span>:<span class="number">30</span></span><br><span class="line">tags:</span><br><span class="line">        - weather</span><br><span class="line">categories:</span><br><span class="line">        - daily</span><br><span class="line">---</span><br><span class="line">晴れた日より?菜が必要です。</span><br><span class="line">&#123;% asset_img sky2.jpg This is an test image %&#125;</span><br><span class="line">&#123;% asset_img sky3.jpg This is an test image %&#125;</span><br></pre></td></tr></table></figure><ul><li>这样就能成功显示了，测试下吧：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></li></ul><p><a href="http://alexcld.com/" title="作者博客">Alex博客</a></p>]]></content>
     
@@ -155,10 +155,10 @@
     
     
     
-    <category term="Hexo插入图片" scheme="http://alexcld.com/categories/Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
+    <category term="hexo" scheme="http://alexcld.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="http://alexcld.com/tags/hexo/"/>
+    <category term="Hexo插入图片" scheme="http://alexcld.com/tags/Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     
   </entry>
   

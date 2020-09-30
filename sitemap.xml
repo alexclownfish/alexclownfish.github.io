@@ -109,7 +109,7 @@
   </url>
   
   <url>
-    <loc>http://alexcld.com/tags/hexo/</loc>
+    <loc>http://alexcld.com/tags/Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -133,13 +133,6 @@
   
   <url>
     <loc>http://alexcld.com/categories/%E5%A5%BD%E5%89%A7%E6%8E%A8%E8%8D%90/</loc>
-    <lastmod>2020-09-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://alexcld.com/categories/Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
