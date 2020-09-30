@@ -50,6 +50,9 @@
 <h2 id="第三种就是是用插件的方式来进行引用图片"><a href="#第三种就是是用插件的方式来进行引用图片" class="headerlink" title="第三种就是是用插件的方式来进行引用图片"></a>第三种就是是用插件的方式来进行引用图片</h2>具体的细节我这里就不再多讲了，可以看下之前的文章：<a href="https://alexcld.com/2020/08/14/%E8%A7%A3%E5%86%B3Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">插件的方式引入图片</a><br>效果图的话可以看这里：<a href="https://alexcld.com/2020/09/14/phototest/">效果图</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo插入图片及控制大小</tag>
       </tags>
@@ -171,6 +174,9 @@
 </ul>
 <p><a href="http://alexcld.com/" title="作者博客">Alex博客</a></p>
 ]]></content>
+      <categories>
+        <category>Hexo插入图片</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
