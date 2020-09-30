@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://alexcld.com/tags/index.html</loc>
+    
+    <lastmod>2020-09-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://alexcld.com/2020/08/14/%E8%A7%A3%E5%86%B3Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2020-09-30</lastmod>
@@ -45,13 +52,6 @@
   
   <url>
     <loc>http://alexcld.com/categories/index.html</loc>
-    
-    <lastmod>2020-09-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://alexcld.com/tags/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
