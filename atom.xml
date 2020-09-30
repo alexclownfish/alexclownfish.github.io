@@ -6,7 +6,7 @@
   <link href="http://alexcld.com/atom.xml" rel="self"/>
   
   <link href="http://alexcld.com/"/>
-  <updated>2020-09-30T06:17:12.131Z</updated>
+  <updated>2020-09-25T09:08:43.000Z</updated>
   <id>http://alexcld.com/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://alexcld.com/2020/09/30/test/"/>
-    <id>http://alexcld.com/2020/09/30/test/</id>
-    <published>2020-09-30T06:16:45.000Z</published>
-    <updated>2020-09-30T06:17:12.131Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>test</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;test&quot;&gt;&lt;a href=&quot;#test&quot; class=&quot;headerlink&quot; title=&quot;test&quot;&gt;&lt;/a&gt;test&lt;/h2&gt;&lt;p&gt;test&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>hexo插入背景音乐</title>
