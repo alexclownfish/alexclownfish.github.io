@@ -24,7 +24,8 @@
 <li>第三种是之前有讲到过插件引用</li>
 </ul>
 <h2 id="直接引用markdown插入"><a href="#直接引用markdown插入" class="headerlink" title="直接引用markdown插入"></a>直接引用markdown插入</h2><ul>
-<li>首先是直接引用的方法需要在images目录里放入需要引入的图片<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">![lena](https:<span class="comment">//alexcld.com/images/pengyuyan.jpg)</span></span><br></pre></td></tr></table></figure>
+<li>首先是直接引用的方法需要在images目录里放入需要引入的图片<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">![lena](https:<span class="comment">//alexcld.com/images/pengyuyan.jpg)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>我这里就直接引用之前的图片了，图片链接自己可以在网上找，</li>
 <li>本地图片的话可以直接使用路径来引用</li>
@@ -33,8 +34,7 @@
 </li>
 </ul>
 <h2 id="使用html方法引入"><a href="#使用html方法引入" class="headerlink" title="使用html方法引入"></a>使用html方法引入</h2><ul>
-<li>第二种就是使用html来引用插入的图片<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot;https://alexcld.com/images/pengyuyan.jpg&quot;</span> width=<span class="number">256</span> height=<span class="number">256</span> /&gt;</span><br></pre></td></tr></table></figure>
+<li>第二种就是使用html来引用插入的图片<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot;https://alexcld.com/images/pengyuyan.jpg&quot;</span> width=<span class="number">256</span> height=<span class="number">256</span> /&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>固定图片大小：width=256,height=256设置的是显示图像的尺寸，src后面接的就是图像对象</li>
 </ul>
@@ -64,8 +64,7 @@
 <p>两种方式：</p>
 <ul>
 <li>单个音乐</li>
-<li>歌单<h3 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h3>这种方式比较简单，直接到网易云搜索需要添加的背景音乐然后生成外链，将外链粘贴到sidebar.swig里边，可以切换粘贴位置以达到自己需要的效果。<br>这里随便找了首歌的外链粘了进去<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vim /blog/themes/next/layout/_macro/sidebar.swig</span><br><span class="line"></span><br><span class="line">&lt;iframe frameborder=<span class="string">&quot;no&quot;</span> border=<span class="string">&quot;0&quot;</span> marginwidth=<span class="string">&quot;0&quot;</span> marginheight=<span class="string">&quot;0&quot;</span> width=<span class="number">330</span> height=<span class="number">86</span> src=<span class="string">&quot;//music.163.com/outchain/player?type=3&amp;id=2069329741&amp;auto=1&amp;height=66&quot;</span>&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<li>歌单<h3 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h3>这种方式比较简单，直接到网易云搜索需要添加的背景音乐然后生成外链，将外链粘贴到sidebar.swig里边，<a id="more"></a>可以切换粘贴位置以达到自己需要的效果。<br>这里随便找了首歌的外链粘了进去<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vim /blog/themes/next/layout/_macro/sidebar.swig</span><br><span class="line"></span><br><span class="line">&lt;iframe frameborder=<span class="string">&quot;no&quot;</span> border=<span class="string">&quot;0&quot;</span> marginwidth=<span class="string">&quot;0&quot;</span> marginheight=<span class="string">&quot;0&quot;</span> width=<span class="number">330</span> height=<span class="number">86</span> src=<span class="string">&quot;//music.163.com/outchain/player?type=3&amp;id=2069329741&amp;auto=1&amp;height=66&quot;</span>&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h3>以歌单的形式插入背景音乐，具体操作如下：<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vim /blog/themes/next/layout/_macro/sidebar.swig</span><br><span class="line"></span><br><span class="line">&lt;!-- <span class="built_in">require</span> APlayer --&gt;</span><br><span class="line">    &lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css&quot;</span>&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;!-- <span class="built_in">require</span> MetingJS--&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;!--网易云--&gt;</span><br><span class="line">    &lt;meting-js</span><br><span class="line">      server=<span class="string">&quot;netease&quot;</span></span><br><span class="line">      id=<span class="string">&quot;3129764102&quot;</span></span><br><span class="line">          type=<span class="string">&quot;playlist&quot;</span></span><br><span class="line">          mini=<span class="string">&quot;false&quot;</span></span><br><span class="line">      fixed=<span class="string">&quot;false&quot;</span></span><br><span class="line">      list-folded=<span class="string">&quot;true&quot;</span></span><br><span class="line">      autoplay=<span class="string">&quot;true&quot;</span></span><br><span class="line">      volume=<span class="string">&quot;0.4&quot;</span></span><br><span class="line">      theme=<span class="string">&quot;#FADFA3&quot;</span></span><br><span class="line">      order=<span class="string">&quot;random&quot;</span></span><br><span class="line">          loop=<span class="string">&quot;all&quot;</span></span><br><span class="line">      preload=<span class="string">&quot;auto&quot;</span></span><br><span class="line">      mutex=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">    &lt;/meting-js&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/aside&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;sidebar-dimmer&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">&#123;% endmacro %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <a href="https://github.com/metowolf/MetingJS">可参考属性</a><br><img src="https://img-blog.csdnimg.cn/20200925165345366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><a href="https://alexcld.com/">效果</a><br><img src="https://img-blog.csdnimg.cn/20200925165548731.png#pic_center" alt="在这里插入图片描述"></li>
 </ul>
@@ -84,10 +83,10 @@
 <li>在windows上安装Git bash</li>
 <li>在windows上安装nodejs</li>
 <li>下载地址：<a href="https://www.git-scm.com/">Git bash</a> ,  <a href="https://nodejs.org/en/">nodejs</a></li>
-<li>将如下几个文件，目录拷贝至新的电脑<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"> package.json</span><br><span class="line"> scaffolds/</span><br><span class="line"> source/</span><br><span class="line"> themes/</span><br></pre></td></tr></table></figure></li>
+<li>将如下几个文件，目录拷贝至新的电脑<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"> package.json</span><br><span class="line"> scaffolds/</span><br><span class="line"> source/</span><br><span class="line"> themes/</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
 <li>迁移到linux环境：步骤基本一致，只需保证将以上四个目录拷贝至blog目录，再准备环境，安装hexo即可。<h2 id="Git-bash安装"><a href="#Git-bash安装" class="headerlink" title="Git bash安装"></a>Git bash安装</h2>安装Windows版的Git安装程序</li>
 </ul>
-<a id="more"></a>
 <p><img src="https://img-blog.csdnimg.cn/20200930150734139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>安装组件：这里可以使用默认选项，点击【Next &gt;】</p>
 <ul>
 <li>图标组件（Additional icons）：选择是否创建桌面快捷方</li>
@@ -144,12 +143,11 @@
 <li><p>修改配置文件</p>
 <ul>
 <li>在根目录下配置文件_config.yml 中有 post_asset_folder:false改为true。</li>
-<li>这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用</li>
+<li>这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用<a id="more"></a></li>
 <li>我这里放的图片是：sky2.jpg</li>
 </ul>
 </li>
 <li><p>安装插件：hexo-asset-image(插件经测试无问题)</p>
-<a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install https:<span class="comment">//github.com/7ym0n/hexo-asset-image --save（使用cnpm速度相当会快点，当然npm也可以滴）</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>使用这个插件来引入图片，而不是网上那些方法里说的用传统md语法相对路径的方法。</li>
