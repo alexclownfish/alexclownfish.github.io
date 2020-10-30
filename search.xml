@@ -83,9 +83,8 @@
     <content><![CDATA[<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><ul>
 <li>在windows上安装Git bash</li>
 <li>在windows上安装nodejs</li>
-<li>下载地址：<a href="https://www.git-scm.com/">Git bash</a> ,  <a href="https://nodejs.org/en/">nodejs</a></li>
-<li>将如下几个文件，目录拷贝至新的电脑<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"> package.json</span><br><span class="line"> scaffolds/</span><br><span class="line"> source/</span><br><span class="line"> themes/</span><br></pre></td></tr></table></figure>
-<a id="more"></a></li>
+<li>下载地址：<a href="https://www.git-scm.com/">Git bash</a> ,  <a href="https://nodejs.org/en/">nodejs</a><a id="more"></a></li>
+<li>将如下几个文件，目录拷贝至新的电脑<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"> package.json</span><br><span class="line"> scaffolds/</span><br><span class="line"> source/</span><br><span class="line"> themes/</span><br></pre></td></tr></table></figure></li>
 <li>迁移到linux环境：步骤基本一致，只需保证将以上四个目录拷贝至blog目录，再准备环境，安装hexo即可。<h2 id="Git-bash安装"><a href="#Git-bash安装" class="headerlink" title="Git bash安装"></a>Git bash安装</h2>安装Windows版的Git安装程序</li>
 </ul>
 <p><img src="https://img-blog.csdnimg.cn/20200930150734139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>安装组件：这里可以使用默认选项，点击【Next &gt;】</p>
@@ -126,7 +125,9 @@
   <entry>
     <title>《若能与你共乘海浪之上》</title>
     <url>/2020/09/14/phototest/</url>
-    <content><![CDATA[<p>剧情大部分是快进看完的<br>何必为了一句承诺<br>女主精神失常 男主失去生命<br>若能与你共乘海浪之上<br><img src="https://china-img.soulapp.cn/image/2020-09-14/f10bb896-7c9e-4e7e-8559-9e3f99bfc757-1600046808195.png?x-oss-process=image/resize,m_lfit,w_750," width="70%"></p>
+    <content><![CDATA[<p>剧情大部分是快进看完的<br>何必为了一句承诺<br>女主精神失常 男主失去生命<br>若能与你共乘海浪之上</p>
+<a id="more"></a>
+<img src="https://china-img.soulapp.cn/image/2020-09-14/f10bb896-7c9e-4e7e-8559-9e3f99bfc757-1600046808195.png?x-oss-process=image/resize,m_lfit,w_750," width="70%">
 ]]></content>
       <categories>
         <category>好剧推荐</category>
