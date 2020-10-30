@@ -4,6 +4,7 @@
     <title>A sunny day</title>
     <url>/2020/08/14/A-sunny-day-1/</url>
     <content><![CDATA[<p>晴れた日より陽菜が必要です。</p>
+<a id="more"></a>
 <img src="/2020/08/14/A-sunny-day-1/sky2.jpg" class title="This is an test image">
 <img src="/2020/08/14/A-sunny-day-1/sky3.jpg" class title="This is an test image">
 ]]></content>
@@ -20,12 +21,11 @@
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,三种方法有优有劣，关键看自己的习惯了</p>
 <ul>
 <li>第一种是直接引用markdown插入</li>
-<li>第二种是使用html来引用插入</li>
+<li>第二种是使用html来引用插入<a id="more"></a></li>
 <li>第三种是之前有讲到过插件引用</li>
 </ul>
 <h2 id="直接引用markdown插入"><a href="#直接引用markdown插入" class="headerlink" title="直接引用markdown插入"></a>直接引用markdown插入</h2><ul>
-<li>首先是直接引用的方法需要在images目录里放入需要引入的图片<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">![lena](https:<span class="comment">//alexcld.com/images/pengyuyan.jpg)</span></span><br></pre></td></tr></table></figure>
+<li>首先是直接引用的方法需要在images目录里放入需要引入的图片<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">![lena](https:<span class="comment">//alexcld.com/images/pengyuyan.jpg)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>我这里就直接引用之前的图片了，图片链接自己可以在网上找，</li>
 <li>本地图片的话可以直接使用路径来引用</li>
@@ -62,9 +62,10 @@
     <url>/2020/09/25/hexo%E6%8F%92%E5%85%A5%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</url>
     <content><![CDATA[<h1 id="hexo插入音乐"><a href="#hexo插入音乐" class="headerlink" title="hexo插入音乐"></a>hexo插入音乐</h1><p><a href="https://alexcld.com/">可以到我的博客参考一下样式</a></p>
 <p>两种方式：</p>
+<a id="more"></a>
 <ul>
 <li>单个音乐</li>
-<li>歌单<h3 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h3>这种方式比较简单，直接到网易云搜索需要添加的背景音乐然后生成外链，将外链粘贴到sidebar.swig里边，<a id="more"></a>可以切换粘贴位置以达到自己需要的效果。<br>这里随便找了首歌的外链粘了进去<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vim /blog/themes/next/layout/_macro/sidebar.swig</span><br><span class="line"></span><br><span class="line">&lt;iframe frameborder=<span class="string">&quot;no&quot;</span> border=<span class="string">&quot;0&quot;</span> marginwidth=<span class="string">&quot;0&quot;</span> marginheight=<span class="string">&quot;0&quot;</span> width=<span class="number">330</span> height=<span class="number">86</span> src=<span class="string">&quot;//music.163.com/outchain/player?type=3&amp;id=2069329741&amp;auto=1&amp;height=66&quot;</span>&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<li>歌单<h3 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h3>这种方式比较简单，直接到网易云搜索需要添加的背景音乐然后生成外链，将外链粘贴到sidebar.swig里边，可以切换粘贴位置以达到自己需要的效果。<br>这里随便找了首歌的外链粘了进去<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vim /blog/themes/next/layout/_macro/sidebar.swig</span><br><span class="line"></span><br><span class="line">&lt;iframe frameborder=<span class="string">&quot;no&quot;</span> border=<span class="string">&quot;0&quot;</span> marginwidth=<span class="string">&quot;0&quot;</span> marginheight=<span class="string">&quot;0&quot;</span> width=<span class="number">330</span> height=<span class="number">86</span> src=<span class="string">&quot;//music.163.com/outchain/player?type=3&amp;id=2069329741&amp;auto=1&amp;height=66&quot;</span>&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h3>以歌单的形式插入背景音乐，具体操作如下：<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vim /blog/themes/next/layout/_macro/sidebar.swig</span><br><span class="line"></span><br><span class="line">&lt;!-- <span class="built_in">require</span> APlayer --&gt;</span><br><span class="line">    &lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css&quot;</span>&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;!-- <span class="built_in">require</span> MetingJS--&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;!--网易云--&gt;</span><br><span class="line">    &lt;meting-js</span><br><span class="line">      server=<span class="string">&quot;netease&quot;</span></span><br><span class="line">      id=<span class="string">&quot;3129764102&quot;</span></span><br><span class="line">          type=<span class="string">&quot;playlist&quot;</span></span><br><span class="line">          mini=<span class="string">&quot;false&quot;</span></span><br><span class="line">      fixed=<span class="string">&quot;false&quot;</span></span><br><span class="line">      list-folded=<span class="string">&quot;true&quot;</span></span><br><span class="line">      autoplay=<span class="string">&quot;true&quot;</span></span><br><span class="line">      volume=<span class="string">&quot;0.4&quot;</span></span><br><span class="line">      theme=<span class="string">&quot;#FADFA3&quot;</span></span><br><span class="line">      order=<span class="string">&quot;random&quot;</span></span><br><span class="line">          loop=<span class="string">&quot;all&quot;</span></span><br><span class="line">      preload=<span class="string">&quot;auto&quot;</span></span><br><span class="line">      mutex=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">    &lt;/meting-js&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/aside&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;sidebar-dimmer&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">&#123;% endmacro %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <a href="https://github.com/metowolf/MetingJS">可参考属性</a><br><img src="https://img-blog.csdnimg.cn/20200925165345366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTUwOTU4Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><a href="https://alexcld.com/">效果</a><br><img src="https://img-blog.csdnimg.cn/20200925165548731.png#pic_center" alt="在这里插入图片描述"></li>
 </ul>
@@ -141,9 +142,10 @@
 <p>解决方案如下：</p>
 <ul>
 <li><p>修改配置文件</p>
+<a id="more"></a>
 <ul>
 <li>在根目录下配置文件_config.yml 中有 post_asset_folder:false改为true。</li>
-<li>这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用<a id="more"></a></li>
+<li>这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用</li>
 <li>我这里放的图片是：sky2.jpg</li>
 </ul>
 </li>
@@ -181,8 +183,8 @@
     <title>nginx反向代理+nginx性能优化配置详解</title>
     <url>/2020/10/20/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-Nginx%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>代理服务可简单的分为正向代理和反向代理:</p>
-<p>正向代理: 用于代理内部网络对Internet的连接请求(如VPN/NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器, 并将Web服务器的Response回传给客户端: </p>
-<p>反向代理: 与正向代理相反,<a id="more"></a>如果局域网向Internet提供资源,并让Internet上的其他用户可以访问局域网内资源, 也可以设置一个代理服务器, 它提供的服务就是反向代理. 反向代理服务器接受来自Internet的连接,然后将请求转发给内部网络上的服务器,并将Response回传给Internet上请求连接的客户端: </p>
+<p>正向代理: 用于代理内部网络对Internet的连接请求(如VPN/NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器<a id="more"></a>, 并将Web服务器的Response回传给客户端: </p>
+<p>反向代理: 与正向代理相反,如果局域网向Internet提供资源,并让Internet上的其他用户可以访问局域网内资源, 也可以设置一个代理服务器, 它提供的服务就是反向代理. 反向代理服务器接受来自Internet的连接,然后将请求转发给内部网络上的服务器,并将Response回传给Internet上请求连接的客户端: </p>
 <h2 id="一、Nginx反向代理-Web服务器的调度器："><a href="#一、Nginx反向代理-Web服务器的调度器：" class="headerlink" title="一、Nginx反向代理=Web服务器的调度器："></a>一、Nginx反向代理=Web服务器的调度器：</h2><p>（1.）反向代理（Reverse Proxy）方式是指以代理服务器来接受客户端的连接请求，然后将请求转发给网络上的web服务器（可能是apache、nginx、tomcat、iis等），并将从web服务器上得到的结果返回给请求连接的客户端，此时代理服务器对外就表现为一个服务器。</p>
 <p>从上图可以看出：反向代理服务器代理网站Web服务器接收Http请求，对请求进行转发。而且nginx作为反向代理服务器可以根据用户请求的内容把请求转发给后端不同的web服务器，例如静动分离，再例如在nginx上创建多个虚拟主机，这样就成功的做到了在浏览器中输入不同域名（url）的时候访问后端的不同web服务器或web群集。</p>
 <p>（2.）反向代理的作用</p>

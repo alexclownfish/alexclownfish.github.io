@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"alexcld.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言:代理服务可简单的分为正向代理和反向代理: 正向代理: 用于代理内部网络对Internet的连接请求(如VPN&#x2F;NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器, 并将Web服务器的Response回传给客户端:  反向代理: 与正向代理相反,">
+  <meta name="description" content="前言:代理服务可简单的分为正向代理和反向代理: 正向代理: 用于代理内部网络对Internet的连接请求(如VPN&#x2F;NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx反向代理+nginx性能优化配置详解">
 <meta property="og:url" content="http://alexcld.com/2020/10/20/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-Nginx%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Alex&#39;s blog">
-<meta property="og:description" content="前言:代理服务可简单的分为正向代理和反向代理: 正向代理: 用于代理内部网络对Internet的连接请求(如VPN&#x2F;NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器, 并将Web服务器的Response回传给客户端:  反向代理: 与正向代理相反,">
+<meta property="og:description" content="前言:代理服务可简单的分为正向代理和反向代理: 正向代理: 用于代理内部网络对Internet的连接请求(如VPN&#x2F;NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-20T06:46:38.000Z">
-<meta property="article:modified_time" content="2020-10-20T07:11:41.742Z">
+<meta property="article:modified_time" content="2020-10-30T06:24:39.188Z">
 <meta property="article:author" content="Alex">
 <meta property="article:tag" content="nginx反向代理+nginx性能优化配置详解">
 <meta name="twitter:card" content="summary">
@@ -220,10 +220,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-10-20 14:46:38 / 修改时间：15:11:41" itemprop="dateCreated datePublished" datetime="2020-10-20T14:46:38+08:00">2020-10-20</time>
+              <time title="创建时间：2020-10-20 14:46:38" itemprop="dateCreated datePublished" datetime="2020-10-20T14:46:38+08:00">2020-10-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-30 14:24:39" itemprop="dateModified" datetime="2020-10-30T14:24:39+08:00">2020-10-30</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -279,8 +285,8 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>代理服务可简单的分为正向代理和反向代理:</p>
-<p>正向代理: 用于代理内部网络对Internet的连接请求(如VPN/NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器, 并将Web服务器的Response回传给客户端: </p>
-<p>反向代理: 与正向代理相反,<a id="more"></a>如果局域网向Internet提供资源,并让Internet上的其他用户可以访问局域网内资源, 也可以设置一个代理服务器, 它提供的服务就是反向代理. 反向代理服务器接受来自Internet的连接,然后将请求转发给内部网络上的服务器,并将Response回传给Internet上请求连接的客户端: </p>
+<p>正向代理: 用于代理内部网络对Internet的连接请求(如VPN/NAT),客户端指定代理服务器,并将本来要直接发送给目标Web服务器的HTTP请求先发送到代理服务器上,然后由代理服务器去访问Web服务器<a id="more"></a>, 并将Web服务器的Response回传给客户端: </p>
+<p>反向代理: 与正向代理相反,如果局域网向Internet提供资源,并让Internet上的其他用户可以访问局域网内资源, 也可以设置一个代理服务器, 它提供的服务就是反向代理. 反向代理服务器接受来自Internet的连接,然后将请求转发给内部网络上的服务器,并将Response回传给Internet上请求连接的客户端: </p>
 <h2 id="一、Nginx反向代理-Web服务器的调度器："><a href="#一、Nginx反向代理-Web服务器的调度器：" class="headerlink" title="一、Nginx反向代理=Web服务器的调度器："></a>一、Nginx反向代理=Web服务器的调度器：</h2><p>（1.）反向代理（Reverse Proxy）方式是指以代理服务器来接受客户端的连接请求，然后将请求转发给网络上的web服务器（可能是apache、nginx、tomcat、iis等），并将从web服务器上得到的结果返回给请求连接的客户端，此时代理服务器对外就表现为一个服务器。</p>
 <p>从上图可以看出：反向代理服务器代理网站Web服务器接收Http请求，对请求进行转发。而且nginx作为反向代理服务器可以根据用户请求的内容把请求转发给后端不同的web服务器，例如静动分离，再例如在nginx上创建多个虚拟主机，这样就成功的做到了在浏览器中输入不同域名（url）的时候访问后端的不同web服务器或web群集。</p>
 <p>（2.）反向代理的作用</p>

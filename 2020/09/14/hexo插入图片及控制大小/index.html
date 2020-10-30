@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"alexcld.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,三种方法有优有劣，关键看自己的习惯了  第一种是直接引用markdown插入 第二种是使用html来引用插入 第三种是之前有讲到过插件引用  直接引用markdown插入 首先是直接引用的方法需要在images目录里放入需要引入的图片">
+  <meta name="description" content="前言首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,三种方法有优有劣，关键看自己的习惯了  第一种是直接引用markdown插入 第二种是使用html来引用插入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo插入图片及控制大小">
 <meta property="og:url" content="http://alexcld.com/2020/09/14/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%8F%8A%E6%8E%A7%E5%88%B6%E5%A4%A7%E5%B0%8F/index.html">
 <meta property="og:site_name" content="Alex&#39;s blog">
-<meta property="og:description" content="前言首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,三种方法有优有劣，关键看自己的习惯了  第一种是直接引用markdown插入 第二种是使用html来引用插入 第三种是之前有讲到过插件引用  直接引用markdown插入 首先是直接引用的方法需要在images目录里放入需要引入的图片">
+<meta property="og:description" content="前言首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,三种方法有优有劣，关键看自己的习惯了  第一种是直接引用markdown插入 第二种是使用html来引用插入">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-14T07:08:09.000Z">
-<meta property="article:modified_time" content="2020-10-19T10:03:18.636Z">
+<meta property="article:modified_time" content="2020-10-30T06:23:11.158Z">
 <meta property="article:author" content="Alex">
 <meta property="article:tag" content="hexo插入图片及控制大小">
 <meta name="twitter:card" content="summary">
@@ -228,7 +228,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-19 18:03:18" itemprop="dateModified" datetime="2020-10-19T18:03:18+08:00">2020-10-19</time>
+                <time title="修改时间：2020-10-30 14:23:11" itemprop="dateModified" datetime="2020-10-30T14:23:11+08:00">2020-10-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -287,12 +287,11 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,三种方法有优有劣，关键看自己的习惯了</p>
 <ul>
 <li>第一种是直接引用markdown插入</li>
-<li>第二种是使用html来引用插入</li>
+<li>第二种是使用html来引用插入<a id="more"></a></li>
 <li>第三种是之前有讲到过插件引用</li>
 </ul>
 <h2 id="直接引用markdown插入"><a href="#直接引用markdown插入" class="headerlink" title="直接引用markdown插入"></a>直接引用markdown插入</h2><ul>
-<li>首先是直接引用的方法需要在images目录里放入需要引入的图片<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![lena](https:<span class="comment">//alexcld.com/images/pengyuyan.jpg)</span></span><br></pre></td></tr></table></figure>
+<li>首先是直接引用的方法需要在images目录里放入需要引入的图片<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![lena](https:<span class="comment">//alexcld.com/images/pengyuyan.jpg)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>我这里就直接引用之前的图片了，图片链接自己可以在网上找，</li>
 <li>本地图片的话可以直接使用路径来引用</li>
