@@ -137,6 +137,20 @@
       </tags>
   </entry>
   <entry>
+    <title>test</title>
+    <url>/2020/11/04/test/</url>
+    <content><![CDATA[<figure class="third">
+   < img src = 'https://ftp.bmp.ovh/imgs/2020/11/9127a06485bff7c2.jpg' width="300" />
+   < img src = 'https://ftp.bmp.ovh/imgs/2020/11/1d935af74cb7953a.jpg' width="300" />
+   < img src = 'https://ftp.bmp.ovh/imgs/2020/11/d5a1ccf0310e6492.jpg' width="300" />
+</figure>
+<figure class="third">
+   < img src = 'https://ftp.bmp.ovh/imgs/2020/11/de5c2597c692dc31.jpg' width="300" />
+   < img src = 'https://ftp.bmp.ovh/imgs/2020/11/2d2c31b981747ede.jpg' width="300"/>
+   < img src = 'https://ftp.bmp.ovh/imgs/2020/11/79d6106470c27408.jpg' width="300"/>
+</figure>]]></content>
+  </entry>
+  <entry>
     <title>Hexo插入图片</title>
     <url>/2020/08/14/%E8%A7%A3%E5%86%B3Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>版本：Hexo5.0.2（Hexo3以上即可）</p>
