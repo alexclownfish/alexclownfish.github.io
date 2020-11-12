@@ -6,7 +6,7 @@
   <link href="http://alexcld.com/atom.xml" rel="self"/>
   
   <link href="http://alexcld.com/"/>
-  <updated>2020-10-30T06:24:39.188Z</updated>
+  <updated>2020-11-12T02:19:50.051Z</updated>
   <id>http://alexcld.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>公告</title>
+    <link href="http://alexcld.com/2020/11/12/%E5%85%AC%E5%91%8A/"/>
+    <id>http://alexcld.com/2020/11/12/%E5%85%AC%E5%91%8A/</id>
+    <published>2020-11-12T02:15:44.000Z</published>
+    <updated>2020-11-12T02:19:50.051Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="此博客不在维护，不再更新功能-文章将与新博客同步"><a href="#此博客不在维护，不再更新功能-文章将与新博客同步" class="headerlink" title="此博客不在维护，不再更新功能,文章将与新博客同步"></a>此博客不在维护，不再更新功能,文章将与新博客同步</h3><h4 id="烦劳移步新博客"><a href="#烦劳移步新博客" class="headerlink" title="烦劳移步新博客"></a>烦劳移步新博客</h4><p><a href="https://butterfly.alexcld.com/">https://butterfly.alexcld.com</a></p><h5 id="Alex"><a href="#Alex" class="headerlink" title="Alex"></a>Alex</h5>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;此博客不在维护，不再更新功能-文章将与新博客同步&quot;&gt;&lt;a href=&quot;#此博客不在维护，不再更新功能-文章将与新博客同步&quot; class=&quot;headerlink&quot; title=&quot;此博客不在维护，不再更新功能,文章将与新博客同步&quot;&gt;&lt;/a&gt;此博客不在维护，不再更新功能</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="http://alexcld.com/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="公告" scheme="http://alexcld.com/tags/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>nginx反向代理+nginx性能优化配置详解</title>
